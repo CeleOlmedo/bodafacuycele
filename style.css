@@ -341,32 +341,32 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  min-width: clamp(60px, 14vw, 96px);
+  gap: 6px;
+  min-width: clamp(52px, 11vw, 96px);
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 16px;
-  padding: clamp(14px, 3vw, 22px) clamp(10px, 2.5vw, 18px);
+  padding: clamp(10px, 2.5vw, 22px) clamp(8px, 2vw, 18px);
 }
 .countdown-num {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
-  font-size: clamp(40px, 9vw, 72px);
+  font-size: clamp(28px, 6.5vw, 72px);
   line-height: 1;
   color: white;
   letter-spacing: -0.02em;
 }
 .countdown-label {
   font-family: 'Jost', sans-serif;
-  font-size: clamp(9px, 1.5vw, 11px);
+  font-size: clamp(8px, 1.2vw, 11px);
   font-weight: 400;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--sage-light);
 }
 .countdown-sep {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 6vw, 48px);
+  font-size: clamp(20px, 4.5vw, 48px);
   font-weight: 300;
   color: rgba(255,255,255,0.3);
   line-height: 1;
@@ -385,7 +385,10 @@ html, body {
 .location-text {
   flex: 1;
   padding: 70px clamp(24px, 10vw, 140px);
+  text-align: center;
 }
+.location-text .section-label { display: flex; justify-content: center; }
+.location-text .thin-rule { margin: 32px auto; }
 .location-map-placeholder {
   flex: 1;
   min-height: 300px;
@@ -416,6 +419,10 @@ html, body {
   font-size: clamp(14px, 2vw, 16px);
   color: var(--text-mid);
   font-weight: 300;
+  text-align: left;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .location-detail-icon {
   width: 20px;
@@ -570,6 +577,8 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .dresscode-tag {
   display: inline-block;
@@ -587,6 +596,7 @@ html, body {
 .dresscode-items {
   list-style: none;
   margin-top: 24px;
+  width: 100%;
 }
 .dresscode-items li {
   font-family: 'Jost', sans-serif;
@@ -597,6 +607,7 @@ html, body {
   border-bottom: 1px solid rgba(0,0,0,0.06);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 .dresscode-items li::before {
@@ -704,6 +715,12 @@ html, body {
   margin-top: 24px;
 }
 
+/* ── AMPERSAND PORTADA con Playfair Display ── */
+.cover-amp-char {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
 /* ── FLORAL DECORATIONS ── */
 .floral-deco {
   opacity: 0.13;
@@ -732,6 +749,13 @@ html, body {
   }
   .location-text {
     padding: 90px 70px 90px clamp(60px, 10vw, 140px);
+    text-align: left;
+  }
+  .location-text .section-label { justify-content: flex-start; display: block; }
+  .location-text .thin-rule { margin: 32px 0; }
+  .location-detail {
+    margin-left: 0;
+    margin-right: 0;
   }
   .location-map-placeholder {
     min-height: 420px;
@@ -749,6 +773,11 @@ html, body {
   }
   .dresscode-text {
     padding: 80px 60px 80px 60px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .dresscode-items li {
+    justify-content: flex-start;
   }
 }
 
