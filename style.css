@@ -717,8 +717,8 @@ html, body {
 
 /* ── AMPERSAND PORTADA con Playfair Display ── */
 .cover-amp-char {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
 }
 
 /* ── FLORAL DECORATIONS ── */
