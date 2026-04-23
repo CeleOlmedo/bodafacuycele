@@ -350,7 +350,7 @@ html, body {
 .countdown-num {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
-  font-size: clamp(28px, 6.5vw, 72px);
+  font-size: clamp(24px, 4.5vw, 56px);
   line-height: 1;
   color: white;
   letter-spacing: -0.02em;
@@ -365,7 +365,7 @@ html, body {
 }
 .countdown-sep {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 4.5vw, 48px);
+  font-size: clamp(18px, 3vw, 36px);
   font-weight: 300;
   color: rgba(255,255,255,0.3);
   line-height: 1;
@@ -418,7 +418,6 @@ html, body {
   font-size: clamp(14px, 2vw, 16px);
   color: var(--text-mid);
   font-weight: 300;
-  text-align: left;
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
