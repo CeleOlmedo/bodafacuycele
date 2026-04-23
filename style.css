@@ -546,7 +546,6 @@ html, body {
   font-weight: 300;
   line-height: 1.7;
   color: var(--text-mid);
-  max-width: 700px;
   margin: 0 auto 36px;
 }
 
