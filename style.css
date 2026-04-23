@@ -8,11 +8,9 @@
   --sage-light: #a0b090;
   --sage-dark: #7a8c6e;
   --sage-muted: rgba(122,140,110,0.2);
-  --blush: rgba(122,140,110,0.1);
   --blush-light: rgba(122,140,110,0.08);
   --dusty-rose: #7a8c6e;
   --lavender: rgba(255,255,255,0.5);
-  --lavender-light: rgba(255,255,255,0.6);
   --warm-gold: #c5b99a;
   --text-dark: #5a5040;
   --text-mid: #8a7e6b;
@@ -171,7 +169,7 @@ html, body {
 
 .section-body {
   font-family: 'Jost', sans-serif;
-  font-size: clamp(15px, 2.2vw, 17px);
+  font-size: clamp(17px, 2.5vw, 20px);
   font-weight: 300;
   line-height: 1.85;
   color: var(--text-mid);
@@ -286,7 +284,7 @@ html, body {
 }
 .section-dear .section-body {
   max-width: 100%;
-  font-size: clamp(16px, 2.5vw, 20px);
+  font-size: clamp(18px, 2.8vw, 22px);
   line-height: 2;
   color: var(--text-mid);
 }
@@ -602,7 +600,7 @@ html, body {
 }
 .dresscode-items li {
   font-family: 'Jost', sans-serif;
-  font-size: clamp(13px, 2vw, 15px);
+  font-size: clamp(15px, 2vw, 17px);
   font-weight: 300;
   color: var(--text-mid);
   padding: 10px 0;
@@ -715,12 +713,6 @@ html, body {
   text-transform: uppercase;
   color: var(--text-light);
   margin-top: 24px;
-}
-
-/* ── AMPERSAND PORTADA con Playfair Display ── */
-.cover-amp-char {
-  font-family: 'EB Garamond', serif;
-  font-weight: 500;
 }
 
 /* ── FLORAL DECORATIONS ── */
