@@ -332,45 +332,49 @@ html, body {
 .countdown-grid {
   display: inline-flex;
   align-items: center;
-  gap: clamp(12px, 3vw, 28px);
-  flex-wrap: wrap;
+  gap: clamp(4px, 1.5vw, 28px);
+  flex-wrap: nowrap;
   justify-content: center;
+  width: 100%;
 }
 .countdown-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  min-width: clamp(52px, 11vw, 96px);
+  min-width: 0;
+  flex: 1 1 0;
+  max-width: clamp(60px, 18vw, 96px);
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 16px;
-  padding: clamp(10px, 2.5vw, 22px) clamp(8px, 2vw, 18px);
+  padding: clamp(8px, 2vw, 22px) clamp(4px, 1.5vw, 18px);
 }
 .countdown-num {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
-  font-size: clamp(24px, 4.5vw, 56px);
+  font-size: clamp(20px, 5vw, 56px);
   line-height: 1;
   color: white;
   letter-spacing: -0.02em;
 }
 .countdown-label {
   font-family: 'Jost', sans-serif;
-  font-size: clamp(8px, 1.2vw, 11px);
+  font-size: clamp(7px, 1.5vw, 11px);
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--sage-light);
 }
 .countdown-sep {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 3vw, 36px);
+  font-size: clamp(16px, 3.5vw, 36px);
   font-weight: 300;
   color: rgba(255,255,255,0.3);
   line-height: 1;
   margin-bottom: 24px;
   align-self: center;
+  flex-shrink: 0;
 }
 
 /* ── LOCATION ── */
@@ -418,6 +422,7 @@ html, body {
   font-size: clamp(14px, 2vw, 16px);
   color: var(--text-mid);
   font-weight: 300;
+  text-align: left;
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
@@ -747,13 +752,12 @@ html, body {
   }
   .location-text {
     padding: 90px 70px 90px clamp(60px, 10vw, 140px);
-    text-align: left;
   }
-  .location-text .section-label { justify-content: flex-start; display: block; }
-  .location-text .thin-rule { margin: 32px 0; }
+  .location-text .section-label { display: flex; justify-content: center; }
+  .location-text .thin-rule { margin: 32px auto; }
   .location-detail {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   .location-map-placeholder {
     min-height: 420px;
@@ -771,11 +775,9 @@ html, body {
   }
   .dresscode-text {
     padding: 80px 60px 80px 60px;
-    align-items: flex-start;
-    text-align: left;
   }
   .dresscode-items li {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 
