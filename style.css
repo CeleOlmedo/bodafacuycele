@@ -72,8 +72,8 @@ html, body {
 
 .cover-pre {
   font-family: 'Jost', sans-serif;
-  font-weight: 300;
-  font-size: 13px;
+  font-weight: 500;
+  font-size: 17px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--sage-dark);
@@ -118,20 +118,21 @@ html, body {
 
 .cover-date {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 4vw, 26px);
-  font-weight: 300;
+  font-size: clamp(30px, 10vw, 34px);
+  font-weight: 600;
   letter-spacing: 0.1em;
   color: var(--text-mid);
 }
 
 .cover-tag {
-  margin-top: 20px;
+  margin-top: 28px;
   font-family: 'Jost', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--sage);
+  margin-top: 34px;
 }
 
 /* ── SECTIONS SHARED ── */
@@ -144,7 +145,7 @@ html, body {
 
 .section-label {
   font-family: 'Jost', sans-serif;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.4em;
   text-transform: uppercase;
@@ -164,13 +165,13 @@ html, body {
 
 .section-title em {
   font-style: italic;
-  color: var(--dusty-rose);
+  color: #677c48;
 }
 
 .section-body {
   font-family: 'Jost', sans-serif;
   font-size: clamp(17px, 2.5vw, 20px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.85;
   color: var(--text-mid);
   max-width: 680px;
@@ -289,7 +290,7 @@ html, body {
   color: var(--text-mid);
 }
 .section-dear .thin-rule { margin: 32px auto; }
-.section-dear .section-label { justify-content: center; display: flex; }
+.section-dear .section-label { justify-content: center; display: flex; color: #677c48; font-size: 15px;}
 .section-dear .section-title { font-size: clamp(40px, 8vw, 60px); }
 
 /* ── DATE ── */
@@ -299,9 +300,9 @@ html, body {
   text-align: center;
   padding: 80px clamp(24px, 10vw, 140px);
 }
-.section-date .section-label { color: var(--sage-light); display: flex; justify-content: center; }
-.section-date .section-title { color: white; font-size: clamp(36px, 7vw, 64px); }
-.section-date .section-body { color: rgba(255,255,255,0.7); max-width: 100%; font-size: clamp(15px, 2.2vw, 18px); }
+.section-date .section-label { color: var(--sage-light); display: flex; justify-content: center; font-weight: 500; color: #bfcea7; margin-bottom: 2px;}
+.section-date .section-title { color: white; font-size: clamp(36px, 7vw, 64px); margin-bottom: 32px; font-weight: 500;}
+.section-date .section-body { color: rgba(255,255,255,0.9); max-width: 100%; font-size: clamp(18px, 4vw, 21px); }
 .section-date .thin-rule { background: var(--sage-light); opacity: 0.5; margin: 32px auto; }
 
 .date-big {
@@ -310,16 +311,17 @@ html, body {
   font-size: clamp(72px, 18vw, 120px);
   line-height: 1;
   color: white;
-  margin-bottom: 12px;
+  margin-bottom: 48px;
   letter-spacing: -0.02em;
 }
 .date-month-year {
   font-family: 'Jost', sans-serif;
   font-size: clamp(13px, 2vw, 16px);
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--sage-light);
+  color: #bfcea7;
+  margin-top: 52px;
   margin-bottom: 48px;
 }
 
@@ -359,10 +361,11 @@ html, body {
 .countdown-label {
   font-family: 'Jost', sans-serif;
   font-size: clamp(7px, 1.5vw, 11px);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--sage-light);
+  color: #bfcea7;
+  margin-top: 12px;
 }
 .countdown-sep {
   font-family: 'Cormorant Garamond', serif;
@@ -388,7 +391,7 @@ html, body {
   padding: 70px clamp(24px, 10vw, 140px);
   text-align: center;
 }
-.location-text .section-label { display: flex; justify-content: center; }
+.location-text .section-label { display: flex; justify-content: center; color: #677c48; font-weight: 500; font-size: 15px; margin-bottom: 26px;}
 .location-text .thin-rule { margin: 32px auto; }
 .location-map-placeholder {
   flex: 1;
@@ -438,7 +441,7 @@ html, body {
   padding: 80px clamp(20px, 10vw, 140px);
 }
 .section-payment .thin-rule { margin: 32px auto; }
-.section-payment .section-label { display: flex; justify-content: center; }
+.section-payment .section-label { display: flex; justify-content: center; color: #677c48; font-size: 14px; font-weight: 500; margin-bottom: 28px;}
 
 .alias-box {
   display: inline-flex;
@@ -462,17 +465,17 @@ html, body {
 }
 .alias-label {
   font-family: 'Jost', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--text-light);
-  margin-bottom: 4px;
-  text-align: left;
+  color: #807667;
+  margin-bottom: 12px;
+  text-align: center;
 }
 .alias-value {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(22px, 4vw, 30px);
+  font-size: clamp(24px, 6vw, 32px);
   font-weight: 500;
   color: var(--text-dark);
 }
@@ -511,23 +514,27 @@ html, body {
   max-width: 220px;
 }
 .card-item-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--text-light);
-  margin-bottom: 10px;
+  color: #807667;
+  margin-bottom: 4px;
 }
 .card-item-value {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(26px, 5vw, 36px);
-  font-weight: 400;
+  font-weight: 500;
   color: var(--text-dark);
 }
 .card-item-sub {
-  font-size: 13px;
-  color: var(--text-light);
-  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #807667;
+  margin-top: 18px;
+  margin-bottom: 4px;
 }
 
 /* ── GIFT ── */
@@ -537,16 +544,18 @@ html, body {
   padding: 80px clamp(24px, 12vw, 160px);
 }
 .section-gift .thin-rule { margin: 32px auto; background: var(--dusty-rose); opacity: 0.4; }
-.section-gift .section-label { display: flex; justify-content: center; color: var(--dusty-rose); }
-.section-gift .section-title em { color: var(--dusty-rose); }
+.section-gift .section-label { display: flex; justify-content: center; color: #677c48; font-size: 16px; font-weight: 500; margin-bottom: 20px; }
+.section-gift .section-title em { color: #677c48; }
 .gift-quote {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: clamp(19px, 3vw, 26px);
-  font-weight: 300;
+  font-size: clamp(22px, 6vw, 28px);
+  font-weight: 500;
+  max-width: 700px;
+  text-align: center;
   line-height: 1.7;
-  color: var(--text-mid);
-  margin: 0 auto 36px;
+  color: #5e5649;
+  margin-bottom: 20px;
 }
 
 /* ── DRESS CODE ── */
@@ -582,7 +591,7 @@ html, body {
 .dresscode-tag {
   display: inline-block;
   font-family: 'Jost', sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -590,7 +599,7 @@ html, body {
   background: var(--cream);
   padding: 8px 20px;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .dresscode-items {
   list-style: none;
@@ -599,11 +608,11 @@ html, body {
 }
 .dresscode-items li {
   font-family: 'Jost', sans-serif;
-  font-size: clamp(15px, 2vw, 17px);
-  font-weight: 300;
+  font-size: clamp(16px, 3vw, 18px);
+  font-weight: 400;
   color: var(--text-mid);
   padding: 10px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 2px solid rgba(0,0,0,0.09);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -626,15 +635,16 @@ html, body {
 }
 .section-confirm .section-label { color: var(--cream-dark); display: flex; justify-content: center; }
 .section-confirm .section-title { color: white; }
-.section-confirm .section-body { color: rgba(255,255,255,0.7); max-width: 100%; }
+.section-confirm .section-body { color: rgba(255,255,255,0.75); max-width: 100%; font-size: 21px;}
 .section-confirm .thin-rule { background: var(--sage-light); opacity: 0.4; margin: 32px auto; }
 
 .confirm-deadline {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(32px, 7vw, 48px);
-  font-weight: 300;
+  font-weight: 500;
   color: var(--cream-dark);
-  margin: 24px 0;
+  margin-top: 24px;
+  margin-bottom: 32px;
   font-style: italic;
 }
 
@@ -693,24 +703,26 @@ html, body {
 .closing-subtitle {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: clamp(20px, 3.5vw, 28px);
-  color: var(--text-mid);
-  font-weight: 300;
+  font-size: clamp(24px, 6vw, 32px);
+  color: #6d6351;
+  font-weight: 500;
+  margin-top: 32px;
 }
 .closing-names {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(36px, 7vw, 52px);
-  font-weight: 400;
+  font-weight: 500;
   color: var(--dusty-rose);
-  margin-top: 40px;
+  margin-top: 36px;
 }
 .closing-date-tag {
   font-family: 'Jost', sans-serif;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 500;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--text-light);
-  margin-top: 24px;
+  color: #857964;
+  margin-top: 32px;
 }
 
 /* ── FLORAL DECORATIONS ── */
