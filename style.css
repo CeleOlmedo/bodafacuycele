@@ -192,9 +192,28 @@ html, body {
   height: clamp(220px, 40vw, 420px);
   gap: 0;
   overflow: hidden;
-  /* Difuminado solo arriba y abajo */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  position: relative;
+}
+
+/* Fade top: blanco (section-dear) → foto */
+.photo-strip::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 18%;
+  background: linear-gradient(to bottom, #ffffff, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+/* Fade bottom: foto → verde (section-date) */
+.photo-strip::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 18%;
+  background: linear-gradient(to top, #7a8c6e, transparent);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .photo-slot {
@@ -207,9 +226,46 @@ html, body {
   height: clamp(280px, 50vw, 520px);
   overflow: hidden;
   position: relative;
-  /* Difuminado solo arriba y abajo */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+/* FotoPortada: arriba → crema oscuro (cover), abajo → blanco (section-dear) */
+.photo-strip-single.foto-portada::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 18%;
+  background: linear-gradient(to bottom, #e8e0d0, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+.photo-strip-single.foto-portada::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 18%;
+  background: linear-gradient(to top, #ffffff, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* FotoIntermedia: arriba → verde (section-date), abajo → crema medio (section-location) */
+.foto-intermedia::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 18%;
+  background: linear-gradient(to bottom, #7a8c6e, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+.foto-intermedia::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 18%;
+  background: linear-gradient(to top, #ede8dc, transparent);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .photo-strip-single img,
