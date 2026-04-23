@@ -22,8 +22,6 @@
 
 html, body {
   width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
   background: var(--cream);
   font-family: 'Jost', sans-serif;
   color: var(--text-dark);
