@@ -198,12 +198,18 @@ html, body {
   flex: 1;
   overflow: hidden;
   position: relative;
+  /* Difuminado de bordes izquierdo y derecho en las 3 fotos */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .photo-strip-single {
   height: clamp(280px, 50vw, 520px);
   overflow: hidden;
   position: relative;
+  /* Difuminado arriba y abajo en fotos individuales */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .photo-strip-single img,
@@ -442,7 +448,7 @@ html, body {
 .dresscode-visual {
   width: 100%;
   min-height: 200px;
-  background: var(--lavender);
+  background: #f2e8e5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -602,6 +608,14 @@ html, body {
    DESKTOP: tablet/desktop layout overrides
 ══════════════════════════════════════════ */
 @media (min-width: 700px) {
+  /* Imágenes más altas en desktop */
+  .photo-strip {
+    height: clamp(380px, 45vw, 580px);
+  }
+  .photo-strip-single {
+    height: clamp(420px, 55vw, 680px);
+  }
+
   .section-location {
     flex-direction: row;
   }
