@@ -6,7 +6,9 @@
 .cover-date,
 .closing-date-tag,
 .confirm-deadline,
-.date-month-year {
+.date-month-year,
+.card-item-value,
+.alias-value {
   font-family: 'Playfair Display', serif;
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum" 1, "tnum" 0;
