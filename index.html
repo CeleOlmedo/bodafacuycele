@@ -118,12 +118,37 @@
     Reserva esta fecha en tu agenda y únete a nosotros en este momento
     lleno de amor, alegría y celebración.
   </p>
+
+  <!-- Contador regresivo -->
+  <div class="countdown-wrap">
+    <div class="countdown-grid">
+      <div class="countdown-block">
+        <div class="countdown-num" id="cd-dias">--</div>
+        <div class="countdown-label">días</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <div class="countdown-num" id="cd-horas">--</div>
+        <div class="countdown-label">horas</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <div class="countdown-num" id="cd-min">--</div>
+        <div class="countdown-label">minutos</div>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <div class="countdown-num" id="cd-seg">--</div>
+        <div class="countdown-label">segundos</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ══════════════════════════════════════════
      FOTO INTERMEDIA
 ══════════════════════════════════════════ -->
-<div class="photo-strip-single" style="height:clamp(220px,40vw,400px);">
+<div class="photo-strip-single foto-intermedia">
   <img src="img/FotoIntermedia.jpg" alt="Foto intermedia" style="object-position: 55% 30%;">
 </div>
 
@@ -368,6 +393,38 @@
       setTimeout(function(){ btn.textContent = orig; }, 1800);
     });
   }
+</script>
+<script>
+  // Contador regresivo — 15 de agosto de 2026 a las 11:00 hs (Córdoba, Argentina = UTC-3)
+  (function() {
+    var wedding = new Date('2026-08-15T11:00:00-03:00').getTime();
+
+    function update() {
+      var now = Date.now();
+      var diff = wedding - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-dias').textContent  = '0';
+        document.getElementById('cd-horas').textContent = '0';
+        document.getElementById('cd-min').textContent   = '0';
+        document.getElementById('cd-seg').textContent   = '0';
+        return;
+      }
+
+      var dias  = Math.floor(diff / 86400000);
+      var horas = Math.floor((diff % 86400000) / 3600000);
+      var min   = Math.floor((diff % 3600000)  / 60000);
+      var seg   = Math.floor((diff % 60000)    / 1000);
+
+      document.getElementById('cd-dias').textContent  = dias;
+      document.getElementById('cd-horas').textContent = String(horas).padStart(2,'0');
+      document.getElementById('cd-min').textContent   = String(min).padStart(2,'0');
+      document.getElementById('cd-seg').textContent   = String(seg).padStart(2,'0');
+    }
+
+    update();
+    setInterval(update, 1000);
+  })();
 </script>
 </body>
 </html>

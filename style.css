@@ -192,22 +192,22 @@ html, body {
   height: clamp(220px, 40vw, 420px);
   gap: 0;
   overflow: hidden;
+  /* Difuminado solo arriba y abajo */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .photo-slot {
   flex: 1;
   overflow: hidden;
   position: relative;
-  /* Difuminado de bordes izquierdo y derecho en las 3 fotos */
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .photo-strip-single {
   height: clamp(280px, 50vw, 520px);
   overflow: hidden;
   position: relative;
-  /* Difuminado arriba y abajo en fotos individuales */
+  /* Difuminado solo arriba y abajo */
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
 }
@@ -220,7 +220,10 @@ html, body {
   display: block;
 }
 
-/* ── DEAR GUEST ── */
+/* Foto intermedia — base mobile */
+.foto-intermedia {
+  height: clamp(260px, 55vw, 420px);
+}
 .section-dear {
   background: var(--white);
   text-align: center;
@@ -265,6 +268,54 @@ html, body {
   text-transform: uppercase;
   color: var(--sage-light);
   margin-bottom: 48px;
+}
+
+/* ── COUNTDOWN ── */
+.countdown-wrap {
+  margin-top: 48px;
+}
+.countdown-grid {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(12px, 3vw, 28px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.countdown-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: clamp(60px, 14vw, 96px);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: clamp(14px, 3vw, 22px) clamp(10px, 2.5vw, 18px);
+}
+.countdown-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(40px, 9vw, 72px);
+  line-height: 1;
+  color: white;
+  letter-spacing: -0.02em;
+}
+.countdown-label {
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(9px, 1.5vw, 11px);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--sage-light);
+}
+.countdown-sep {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.3);
+  line-height: 1;
+  margin-bottom: 24px;
+  align-self: center;
 }
 
 /* ── LOCATION ── */
@@ -614,6 +665,10 @@ html, body {
   }
   .photo-strip-single {
     height: clamp(420px, 55vw, 680px);
+  }
+  /* Foto intermedia aún más alta */
+  .photo-strip-single.foto-intermedia {
+    height: clamp(500px, 70vw, 860px);
   }
 
   .section-location {
