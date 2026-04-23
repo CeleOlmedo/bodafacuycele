@@ -530,6 +530,7 @@ html, body {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #807667;
+  margin-top: 15px;
   margin-bottom: 4px;
 }
 .card-item-value {
@@ -544,7 +545,7 @@ html, body {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #807667;
-  margin-top: 18px;
+  margin-top: 10px;
   margin-bottom: 4px;
 }
 
